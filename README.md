@@ -5,8 +5,6 @@
 
  <p align="justify"># Portfolio Website
 
-![Project Image](project-image-url)
-
 > Welcome to my portfolio website built with HTML, CSS, JavaScript, and Bootstrap. Here, I showcase my web development projects and skills, aiming to make a lasting impression on visitors.
 
 ---
@@ -33,7 +31,7 @@ As a passionate web developer, I've created this portfolio website to introduce 
 
 ## Demo
 
-Explore my portfolio website live: [Link to Demo](https://your-username.github.io/portfolio-website/)
+Explore my portfolio website live: [Link to Demo](https://devayanm.github.io/Devayan-Portfolio-main/)
 
 ---
 
