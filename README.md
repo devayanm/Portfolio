@@ -83,9 +83,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 Feel free to reach out to me through the following channels:
 
-- Email: devayan9689@gmail.com
-- GitHub: [Your GitHub Profile](https://github.com/deavaynm)
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/devayan-mandal)
+- Email: [devayan9689@gmail.com](devayan9689@gmail.com)
+- GitHub: [devayanm](https://github.com/deavaynm)
+- LinkedIn: [devayan-mandal](https://www.linkedin.com/in/devayan-mandal)
 
 ---
 
