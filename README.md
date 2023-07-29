@@ -3,9 +3,11 @@
 [![Author](https://img.shields.io/badge/Author-Devayan%20Mandal-blue.svg)](https://www.linkedin.com/in/devayan-mandal/)
 
 
- <p align="justify"># Portfolio Website
+ <p align="justify">
+ 
 
-> Welcome to my portfolio website built with HTML, CSS, JavaScript, and Bootstrap. Here, I showcase my web development projects and skills, aiming to make a lasting impression on visitors.
+
+Welcome to my portfolio website built with HTML, CSS, JavaScript, and Bootstrap. Here, I showcase my web development projects and skills, aiming to make a lasting impression on visitors.
 
 ---
 
@@ -31,7 +33,7 @@ As a passionate web developer, I've created this portfolio website to introduce 
 
 ## Demo
 
-Explore my portfolio website live: [Link to Demo](https://devayanm.github.io/Devayan-Portfolio-main/)
+Explore my portfolio website live: [Link to Demo](https://devayan.netlify.app/)
 
 ---
 
