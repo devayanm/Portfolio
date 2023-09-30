@@ -1,4 +1,4 @@
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -84,7 +84,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('body').classList.toggle('mobile-nav-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -93,7 +93,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -122,12 +122,41 @@
   /**
    * Preloader
    */
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
+  function typeText(text, elementId, delay) {
+    let index = 0;
+    const element = document.getElementById(elementId);
+
+    function type() {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, delay);
+      }
+    }
+
+    type();
   }
+
+  setTimeout(function () {
+    typeText("Welcome", "preloader-text", 100);
+  }, 1000);
+
+  setTimeout(function () {
+    document.getElementById("preloader-text").textContent = ""; // Clear the text
+    typeText("Please wait", "preloader-text", 100);
+  }, 4000);
+
+  setTimeout(function () {
+    document.getElementById("preloader-text").textContent = ""; 
+    typeText("Loading...", "preloader-text", 100);
+  }, 7000);
+
+  setTimeout(function () {
+    document.querySelector('.preloader-container').style.display = 'none';
+    document.querySelector('body').classList.add('loaded');
+  }, 10000); 
+
+
 
   /**
    * Hero type effect
@@ -153,7 +182,7 @@
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'

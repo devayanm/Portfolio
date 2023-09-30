@@ -5,7 +5,7 @@
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: 0; /* attaches the element to the bottom */
+    bottom: 0;
 }
 
 #wrapper {
@@ -61,22 +61,15 @@
 
 #scroll-down::before {
     -webkit-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* Safari 4+ */
-
     -moz-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* Fx 5+ */
-
     -o-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* Opera 12+ */
-
     animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* IE 10+, Fx 29+ */
 
     position: absolute;
-    top: 0;
+    top: 15px;
     margin-left: -2px;
     width: 1.5px;
-    height: 90px;
+    height: 70px;
     background: #000000;
     content: " ";
 }
@@ -94,6 +87,7 @@
         -o-transform: scale(1, 0);
         transform: scale(1, 0);
     }
+
     50% {
         -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
@@ -106,6 +100,7 @@
         -o-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+
     50.1% {
         -webkit-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
@@ -118,6 +113,7 @@
         -o-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+
     100% {
         -webkit-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
@@ -145,6 +141,7 @@
         -o-transform: scale(1, 0);
         transform: scale(1, 0);
     }
+
     50% {
         -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
@@ -157,6 +154,7 @@
         -o-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+
     50.1% {
         -webkit-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
@@ -169,6 +167,7 @@
         -o-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+
     100% {
         -webkit-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
@@ -196,6 +195,7 @@
         -o-transform: scale(1, 0);
         transform: scale(1, 0);
     }
+
     50% {
         -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
@@ -208,6 +208,7 @@
         -o-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+
     50.1% {
         -webkit-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
@@ -220,6 +221,7 @@
         -o-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+
     100% {
         -webkit-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
@@ -247,6 +249,7 @@
         -o-transform: scale(1, 0);
         transform: scale(1, 0);
     }
+
     50% {
         -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
@@ -259,6 +262,7 @@
         -o-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+
     50.1% {
         -webkit-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
@@ -271,6 +275,7 @@
         -o-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+
     100% {
         -webkit-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
@@ -291,6 +296,7 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #272829;
+    background: whitesmoke;
 }
 
 a {
@@ -303,7 +309,12 @@ a:hover {
     text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Raleway", sans-serif;
 }
 
@@ -343,48 +354,32 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+
+.preloader-container {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 9999;
     overflow: hidden;
-    background: #fff;
 }
 
-#preloader:before {
-    content: "";
-    position: fixed;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    border: 6px solid #4285F4;
-    border-top-color: #fff;
-    border-bottom-color: #fff;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    -webkit-animation: animate-preloader 1s linear infinite;
-    animation: animate-preloader 1s linear infinite;
+.typing-text {
+    font-size: 24px;
+    color: #3498db;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-@-webkit-keyframes animate-preloader {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes animate-preloader {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+body.loaded {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -442,12 +437,13 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
 }
 
-.nav-menu > ul > li {
+.nav-menu>ul>li {
     position: relative;
     white-space: nowrap;
 }
 
-.nav-menu a, .nav-menu a:focus {
+.nav-menu a,
+.nav-menu a:focus {
     display: flex;
     align-items: center;
     color: #45505b;
@@ -462,41 +458,54 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
-.nav-menu a i, .nav-menu a:focus i {
+.nav-menu a i,
+.nav-menu a:focus i {
     font-size: 20px;
 }
 
-.nav-menu a span, .nav-menu a:focus span {
+.nav-menu a span,
+.nav-menu a:focus span {
     padding: 0 5px 0 7px;
     color: #45505b;
 }
 
 @media (min-width: 992px) {
-    .nav-menu a, .nav-menu a:focus {
+
+    .nav-menu a,
+    .nav-menu a:focus {
         width: 56px;
     }
 
-    .nav-menu a span, .nav-menu a:focus span {
+    .nav-menu a span,
+    .nav-menu a:focus span {
         display: none;
         color: #fff;
     }
 }
 
-.nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
     color: #fff;
     background: #4285F4;
 }
 
-.nav-menu a:hover span, .nav-menu .active span, .nav-menu .active:focus span, .nav-menu li:hover > a span {
+.nav-menu a:hover span,
+.nav-menu .active span,
+.nav-menu .active:focus span,
+.nav-menu li:hover>a span {
     color: #fff;
 }
 
-.nav-menu a:hover, .nav-menu li:hover > a {
+.nav-menu a:hover,
+.nav-menu li:hover>a {
     width: 100%;
     color: #fff;
 }
 
-.nav-menu a:hover span, .nav-menu li:hover > a span {
+.nav-menu a:hover span,
+.nav-menu li:hover>a span {
     display: block;
 }
 
@@ -628,6 +637,9 @@ section {
 .section-title {
     text-align: center;
     padding-bottom: 30px;
+    display: block;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-title h2 {
@@ -660,10 +672,6 @@ section {
     background: #4285F4;
     bottom: 0;
     left: calc(50% - 20px);
-}
-
-.section-title p {
-    margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -949,7 +957,6 @@ section {
 --------------------------------------------------------------*/
 .contact .info {
     width: 100%;
-    background: #fff;
 }
 
 .contact .info i {
@@ -981,15 +988,21 @@ section {
     color: #728394;
 }
 
-.contact .info .email, .contact .info .phone,
-.contact .info .address, .contact .info .linkedin,
-.contact .info .github, .contact .info .whatsapp {
+.contact .info .email,
+.contact .info .phone,
+.contact .info .address,
+.contact .info .linkedin,
+.contact .info .github,
+.contact .info .whatsapp {
     margin-top: 40px;
 }
 
-.contact .info .email:hover i, .contact .info .address:hover i,
-.contact .info .phone:hover i, .contact .info .github:hover i,
-.contact .info .linkedin:hover i, .contact .info .whatsapp:hover i {
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i,
+.contact .info .github:hover i,
+.contact .info .linkedin:hover i,
+.contact .info .whatsapp:hover i {
     background: #4285F4;
     color: #fff;
 }
@@ -998,6 +1011,7 @@ section {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -1007,6 +1021,7 @@ section {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -1016,7 +1031,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-    background: #f7f8f9;
+    background: white;
     color: #45505b;
     font-size: 14px;
     text-align: center;

@@ -39,12 +39,14 @@
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="loaded">
 
     <!-- ======= Mobile nav toggle button ======= -->
     <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
@@ -87,7 +89,6 @@
                     <div id="wrapper-inner">
                         <div id="scroll-down">
                             <span class="arrow-down">
-                                <!-- css generated icon -->
                             </span>
                             <span id="scroll-title">Scroll down</span>
                         </div>
@@ -104,62 +105,35 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>About Me</h2>
-                    <p>I am a Pre-Final year student pursuing my graduation in B.Tech Information Technology from JIS
-                        College of Engineering (JISCE), Kalyani.
-
-                        • Programming languages familiar with but not limited to :C, C++, C#, Java, Python, HTML, CSS,
-                        JavaScript, PHP, SQL
-                        • Currently learning Express | ReactNative and polishing DSA skills.
-                        • Tools I can use: VS Code, IntelliJ Idea, Eclipse, Pycharm, Git, Git Hub.
-                        • Interested in the fields of CyberSecurity, Machine Learning ,Deep Learning, Blockchain.
-                        • In addition to my technical skills I am a dedicated and collaborative team player,
-                        I am always eager to learn new technologies and tech stacks, and I thrive on challenges and
-                        problem-solving. My goal is to use my skills and knowledge to create impactful and scalable web
-                        solutions that can benefit users and businesses alike. I would be glad for any opportunities,
-                        suggestions or mentoring. Please feel free to reach out to me on LinkedIn.
-                    </p>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="/assets/img/profile.jpg" class="img-fluid" alt="Devayan Mandal"
-                            style="border-radius: 50%; padding-left: 20px; padding-right: 20px">
-                    </div>
-                    <div class="col-lg-8 pt-4 pt-lg-0 content">
-                        <h3>Experienced in Software Development, Data Analytics & Engineering , Machine Learning and
-                            Data Science. Cloud-ready with AWS, Google Cloud Platform, Docker, Kubernetes. Fluent in C,
-                            C++, C#, Python, Java, HTML, CSS, JavaScript, PHP, SQL, Git. Efficient
-                            in DSA & System Design. Passionate about coding & tech.</h3>
-                        <p class="fst-italic">
-                            I am apassionate and aspiring Web Developer eager to learn new technologies, thrive on
-                            challenges,
-                            and create impactful web solutions for users and businesses. Always adapting and evolving
-                            skills to leave a lasting impact on the digital world.
-                        </p>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong>
-                                        <span>19</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong>
-                                        <span>B.Tech in Information Technology</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
-                                        <span>devayan9689@gmail.com</a></span>
-                                    </li>
-
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong>
-                                        <span>India</span>
-                                    </li>
-                                </ul>
-                            </div>
-
+                    <h2 class="m-5">About Me</h2>
+                    <div class="row">
+                        <div class="col-lg-5 mt-5 p-5">
+                            <img src="/assets/img/profile.jpg" class="img-fluid" alt="Devayan Mandal"
+                                style="border-radius: 50%; padding-left: 20px; padding-right: 20px">
                         </div>
-                        <div>
-                            <h4>Current Status</h4>
-                            <!-- My present status -->
+                        <div class="card col-lg-6 p-4">
+                            <ul class="about-me card-body">I am a Pre-Final year student pursuing my graduation in
+                                B.Tech
+                                Information Technology from JIS
+                                College of Engineering (JISCE), Kalyani.
+                                <hr>
+                                <li>Programming languages familiar with but not limited to :C, C++, C#, Java, Python,
+                                    HTML, CSS,
+                                    JavaScript, PHP, SQL</li>
+                                <li>Currently learning Express | ReactNative and polishing DSA skills.</li>
+                                <li>Interested in the fields of CyberSecurity, Machine Learning ,Deep Learning,
+                                    Blockchain.</li>
+                                <li>In addition to my technical skills I am a dedicated and collaborative team player.
+                                </li>
+                                <hr>
+                                I am always eager to learn new technologies and tech stacks, and I thrive on challenges
+                                and
+                                problem-solving. My goal is to use my skills and knowledge to create impactful and
+                                scalable web
+                                solutions that can benefit users and businesses alike. I would be glad for any
+                                opportunities,
+                                suggestions or mentoring. Please feel free to reach out to me on LinkedIn.
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -258,6 +232,14 @@
                                     aria-valuemax="100"></div>
                             </div>
                         </div>
+
+                        <div class="progress">
+                            <span class="skill">React <i class="val">65%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -276,7 +258,7 @@
                 </div>
 
                 <div class="text-center">
-                    <a href="">
+                    <a href="/assets/resume/Resume.Devayan-Mandal.pdf">
                         <button>Download My Resume</button>
                     </a>
                 </div>
@@ -284,7 +266,7 @@
                 <div class="row" style="margin-top: 20px;">
                     <div class="col-lg-6">
                         <h3 class="resume-title">Summary</h3>
-                        <div class="resume-item pb-0">
+                        <div class="resume-item card p-4">
                             <h4>Devayan Mandal</h4>
                             <p><em>Problem-solving &amp; goal-driven Software Developer with 3+ years of self-gained
                                     skills
@@ -303,15 +285,11 @@
                         </div>
 
                         <h3 class="resume-title">Education</h3>
-                        <div class="resume-item">
+                        <div class="resume-item card p-4">
                             <h4>B. Tech in Information Technology <!--(8.65 CGPA Uptil 6th semester)--></h4>
                             <h5>2021 - 2025</h5>
                             <p><em>JIS College of Engineering, Kalyani</em></p>
                             <ul>
-                                <!-- 
-                                
-
-                             -->
                                 <li> Technical Courses: Data Structures, Data Analysis and Algorithms, Machine Learning,
                                     Operating
                                     Systems, Object Oriented Programming, Database Management
@@ -319,7 +297,7 @@
                                     CyberSecurity</li>
                             </ul>
                         </div>
-                        <div class="resume-item">
+                        <div class="resume-item card mt-5 p-4">
                             <h4> Senior Secondary School</h4>
                             <h5>2019 - 2021</h5>
                             <p><em>All India Senior School Certificate Examination</em></p>
@@ -328,7 +306,7 @@
                                 <li>Courses: Computer Science, Physics, Chemistry, Mathematics, English</li>
                             </ul>
                         </div>
-                        <div class="resume-item">
+                        <div class="resume-item mt-5 card p-4">
                             <h4>High School</h4>
                             <h5>2018 - 2019</h5>
                             <p><em>All India Secondary School Examination </em></p>
@@ -340,7 +318,7 @@
                     </div>
                     <div class="col-lg-6">
                         <h3 class="resume-title">Professional Experience</h3>
-                        <div class="resume-item">
+                        <div class="resume-item card p-4">
                             <h4>Web Developement Intern</h4>
                             <h5>August 2023 - Present</h5>
                             <p><em>OctaNet</em></p>
@@ -360,7 +338,7 @@
                             </ul>
                         </div>
 
-                        <div class="resume-item">
+                        <div class="resume-item mt-5 card p-4">
                             <h4>Python Development Intern</h4>
                             <h5>June 2023 - July 2023</h5>
                             <p><em>Code Clause</em></p>
@@ -376,7 +354,7 @@
                             </ul>
                         </div>
 
-                        <div class="resume-item">
+                        <div class="resume-item mt-5 card p-4">
                             <h4>Java Developement Intern</h4>
                             <h5>Feb 2023 - April 2023</h5>
                             <p><em>Oasis Infobyte</em></p>
@@ -676,22 +654,26 @@
     <footer id="footer" style="padding-left: 25px; padding-right: 25px;">
         <div class="container">
             <h3>Devayan Mandal</h3>
-            <p>I'm always excited to connect with fellow professionals and like-minded individuals. Please feel free to
-                drop me a message, and I'll be happy to connect and explore the possibilities together. Looking forward
-                to hearing from you!"</p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/devayan-mandal/" class="linkedin"><i
                         class="bx bxl-linkedin"></i></a>
                 <a href="https://github.com/devayanm" class="github"><i class="bx bxl-github"></i></a>
             </div>
         </div>
-    </footer><!-- End Footer -->
+    </footer>
+    <!-- End Footer -->
 
-    <div id="preloader"></div>
+    <!-- Preloader -->
+    <div class="preloader-container">
+        <div class="typing-text" id="preloader-text"></div>
+    </div>
+
+
+
     <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center scrollto"><i
             class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Vendor JS Files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -700,7 +682,14 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/typed.js/typed.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 </body>
