@@ -14,13 +14,9 @@
     <meta name="robots" content="index,follow" />
 
     <meta property='og:title' content="Devayan Portfolio" />
-    <meta property='og:image' content='' />
     <meta property='og:description' content="Welcome to my profile! My name is Devayan Mandal I'm always excited to connect with 
         fellow professionals and like-minded individuals. Please feel free to drop me a message" name="description" />
-    <meta property='og:url' content='' />
-
-    <meta name="google-site-verification" content="sIXL4nf9gVKA4yxRUOvAVyJ1OgQJG_gEF6XFucZbhVg" />
-
+    <meta name="google-site-verification" content="9bJUfAbNDbQbYd1iaj4XQy8Jwfxg9NMSeUUkcl0IxyU" />
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
@@ -47,13 +43,18 @@
 </head>
 
 <body class="loaded">
+    <div class="form-switch text-center mt-5 me-5 z-1">
+        <i class="bi bi-sun-fill m-5"></i>
+        <input type="checkbox" id="mode" class="form-check-input">
+        <label for="mode" class="form-check-label"></label>
+        <i class="bi bi-moon-fill"></i>
+    </div>
 
     <!-- ======= Mobile nav toggle button ======= -->
     <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
     <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex flex-column justify-content-center">
-
         <nav id="navbar" class="navbar nav-menu">
             <ul>
                 <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
@@ -71,36 +72,43 @@
 
     </header><!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center">
-        <div class="container" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Devayan Mandal</h1>
-            <p>I am a <span class="typed" data-typed-items="Web Developer, Full Stack Developer, Machine Learning Enthusiast, 
-                    Open Source Contributor, CyberSecurity Enthusiast"></span>
-            </p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/devayan-mandal/" class="linkedin"><i
-                        class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/devayanm" class="github"><i class="bx bxl-github"></i></a>
-            </div>
-        </div>
-        <div id="scroll">
-            <a href="#about" class="nav-link scrollto">
-                <div id="wrapper">
-                    <div id="wrapper-inner">
-                        <div id="scroll-down">
-                            <span class="arrow-down">
-                            </span>
-                            <span id="scroll-title">Scroll down</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section><!-- End Hero -->
+
 
     <main id="main">
-
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="hero" style="padding-left: 25px; padding-right: 25px;">
+            <div class="">
+                <div class="row">
+                    <div class="hero-txt col-lg-6 mt-5 p-4" data-aos="zoom-in" data-aos-delay="100">
+                        <h1>Devayan Mandal</h1>
+                        <p>I am a <span class="typed"
+                                data-typed-items="Web Developer, Full Stack Developer, Machine Learning Enthusiast, Open Source Contributor, CyberSecurity Enthusiast"></span>
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/devayan-mandal/" class="linkedin"><i
+                                    class="bx bxl-linkedin"></i></a>
+                            <a href="https://github.com/devayanm" class="github"><i class="bx bxl-github"></i></a>
+                        </div>
+                    </div>
+                    <div class=" hero-img col-lg-6 mt-5 p-4">
+                        <img src="/assets/img/profile.jpg" class="img-fluid" alt="Devayan Mandal"
+                            style="border-radius: 50%;" width="70%" height="auto">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" id="scroll">
+                <a href="#about" class="nav-link scrollto">
+                    <div id="wrapper">
+                        <div id="wrapper-inner">
+                            <div id="scroll-down">
+                                <span class="arrow-down"></span>
+                                <span id="scroll-title">Scroll down</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
         <!-- ======= About Section ======= -->
         <section id="about" class="about" style="padding-left: 25px; padding-right: 25px;">
             <div class="container" data-aos="fade-up">
@@ -109,13 +117,9 @@
                     <h2 class="m-5">About Me</h2>
                     <div class="card p-4">
                         <h5>I am a Pre-Final year student pursuing my graduation in B.Tech Information Technology
-                             from JIS College of Engineering (JISCE), Kalyani.</h5>
+                            from JIS College of Engineering (JISCE), Kalyani.</h5>
                     </div>
                     <div class="row">
-                        <div class="col-lg-5 mt-5 p-5">
-                            <img src="/assets/img/profile.jpg" class="img-fluid" alt="Devayan Mandal"
-                                style="border-radius: 50%; padding-left: 20px; padding-right: 20px">
-                        </div>
                         <div class=" col-lg-6 p-4">
                             <ul class="about-me card-body">
                                 <hr>
@@ -140,8 +144,8 @@
                 </div>
                 <div class="card p-4">
                     <p>I am always eager to learn new technologies and tech stacks, and I thrive on challenges
-                    and problem-solving. My goal is to use my skills and knowledge to create impactful and
-                    scalable web solutions that can benefit users and businesses alike.</p>
+                        and problem-solving. My goal is to use my skills and knowledge to create impactful and
+                        scalable web solutions that can benefit users and businesses alike.</p>
                 </div>
 
             </div>
@@ -355,60 +359,6 @@
                                 <li>Courses: Science, Mathematics, Social Science, Hindi, English</li>
                             </ul>
                         </div>
-
-                        <!-- <div class="resume-item card p-4">
-                            <h4>Web Developement Intern</h4>
-                            <h5>August 2023 - Present</h5>
-                            <p><em>OctaNet</em></p>
-                            <ul>
-                                <li>Result-driven web development intern with hands-on experience contributing to
-                                    impactful projects at Octanet, leveraging front-end and back-end technologies to
-                                    create dynamic web solutions.
-                                </li>
-                                <li>
-                                    Collaborated with the development team to design and implement responsive and
-                                    user-friendly websites using HTML, CSS, and JavaScript. Utilized modern front-end
-                                    frameworks like React to enhance the user interface and
-                                    overall user experience. Assisted in building RESTful APIs and server-side
-                                    functionalities with technologies
-                                    such as Node.js and Express.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="resume-item mt-5 card p-4">
-                            <h4>Python Development Intern</h4>
-                            <h5>June 2023 - July 2023</h5>
-                            <p><em>Code Clause</em></p>
-                            <ul>
-                                <li>Collaborative Python developer with a passion for solving real-world challenges.
-                                    Experienced in contributing to three dynamic projects during an enriching internship
-                                    at CodeClause.
-                                </li>
-                                <li>Gained valuable insights into software development best practices, Agile
-                                    methodologies, and version control systems. Demonstrated adaptability and commitment
-                                    to continuous learning, acquiring new skills throughout the internship.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="resume-item mt-5 card p-4">
-                            <h4>Java Developement Intern</h4>
-                            <h5>Feb 2023 - April 2023</h5>
-                            <p><em>Oasis Infobyte</em></p>
-                            <ul>
-                                <li>Dynamic and proactive Java development intern with hands-on experience in
-                                    contributing to two innovative projects at Oasis Infobyte.
-                                </li>
-                                <li>Gained valuable experience in version control using Git, collaborating effectively
-                                    in a multi-developer environment. Demonstrated adaptability and eagerness to learn,
-                                    mastering new concepts and tools throughout the internship.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
-
                     </div>
         </section><!-- End Resume Section -->
 
@@ -559,29 +509,21 @@
                 </div>
                 <div class="info" style="margin-bottom: 40px;">
                     <div class="row">
-                        <div class="address col-md">
+                        <div class="address col-sm-4">
                             <i class="bi bi-geo-alt-fill"></i>
                             <h4>Location:</h4>
                             <p>Kolkata, IN</p>
                         </div>
 
-                        <div class="email col-md">
-                            <a href="mailto:devayan9689@gmail.com">
-                                <i class="bi bi-chat-square-dots-fill"></i>
-                                <h4>Email:</h4>
-                                <p>devayan9689@gmail.com</p>
+                        <div class="github col-sm-4">
+                            <a href="https://github.com/devayanm">
+                                <i class="bi bi-github"></i>
+                                <h4>GitHub:</h4>
+                                <p>@devayanm</p>
                             </a>
                         </div>
 
-                        <!-- <div class="phone col-md">
-                            <a href="tel:+918334857834">
-                                <i class="bi bi-phone-fill"></i>
-                                <h4>Mobile:</h4>
-                                <p>+91 8334857834</p>
-                            </a>
-                        </div> -->
-
-                        <div class="linkedin col-md">
+                        <div class="linkedin col-sm-4">
                             <a href="https://www.linkedin.com/in/devayan-mandal/">
                                 <i class="bi bi-linkedin"></i>
                                 <h4>LinkedIn:</h4>
@@ -589,24 +531,13 @@
                             </a>
                         </div>
 
-                        <div class="github col-md">
-                            <a href="https://github.com/devayanm">
-                                <i class="bi bi-github"></i>
-                                <h4>GitHub:</h4>
-                                <p>@devayanm</p>
+                        <div class="email col-sm-4">
+                            <a href="mailto:devayan9689@gmail.com">
+                                <i class="bi bi-chat-square-dots-fill"></i>
+                                <h4>Email:</h4>
+                                <p>devayan9689@gmail.com</p>
                             </a>
                         </div>
-                    </div>
-                    <div class="row">
-
-
-                        <!-- <div class="whatsapp col-md">
-                        <a href="">
-                            <i class="bi bi-whatsapp"></i>
-                            <h4>WhatsApp:</h4>
-                            <p></p></a>
-                    </div> -->
-
                     </div>
                 </div>
             </div>
@@ -619,19 +550,12 @@
         <div class="container">
             <h3>Devayan Mandal</h3>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/devayan-mandal/" class="linkedin"><i
-                        class="bx bxl-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/devayan-mandal/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                 <a href="https://github.com/devayanm" class="github"><i class="bx bxl-github"></i></a>
             </div>
         </div>
     </footer>
     <!-- End Footer -->
-
-    <!-- Preloader -->
-    <!-- <div class="preloader-container">
-        <div class="typing-text" id="preloader-text"></div>
-    </div> -->
-
 
 
     <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center scrollto"><i

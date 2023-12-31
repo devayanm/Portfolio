@@ -1,11 +1,9 @@
 /*........Scroll Down............*/
 #scroll {
     padding: 40px;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    position: relative;
     bottom: 0;
+    margin-bottom: -50px;
 }
 
 #wrapper {
@@ -293,19 +291,42 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+:root,
+:root.light {
+    --color-whi: #fff;
+    --color-fg: #000000;
+    --color: #272829;
+    --color-bg: #f5f5f5;
+    --color-blu: #4285F4;
+    --color-pg-bg: #f2f3f5;
+    --color-h: #45505b;
+}
+
+:root.dark {
+    --color-bg: #263238;
+    --color: #fff;
+    --card-bg-color: #607d8b;
+    --color-h: whitesmoke;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
-    color: #272829;
-    background: whitesmoke;
+    color: var(--color);
+    background: var(--color-bg);
+}
+
+.card {
+    background-color: var(--card-bg-color);
 }
 
 a {
-    color: #4285F4;
+    color: var(--color-blu);
     text-decoration: none;
 }
 
 a:hover {
-    color: #2776fa;
+    color: var(--color-blu);
     text-decoration: none;
 }
 
@@ -340,7 +361,7 @@ h6 {
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: #4285F4;
+    background: var(--color-blu);
     width: 40px;
     height: 40px;
     border-radius: 50px;
@@ -349,49 +370,18 @@ h6 {
 
 .back-to-top i {
     font-size: 28px;
-    color: #fff;
+    color: var(--color-whi);
     line-height: 0;
 }
 
 .back-to-top:hover {
-    background: #2776fa;
-    color: #fff;
+    background: var(--color-blu);
+    color: var(--color-whi);
 }
 
 .back-to-top.active {
     visibility: visible;
     opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-
-.preloader-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    overflow: hidden;
-}
-
-.typing-text {
-    font-size: 24px;
-    color: #3498db;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-body.loaded {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -420,7 +410,7 @@ body.loaded {
 @media (max-width: 992px) {
     #header {
         width: 300px;
-        background: #fff;
+        background: var(--color-whi);
         border-right: 1px solid #e6e9ec;
         left: -300px;
     }
@@ -458,13 +448,13 @@ body.loaded {
 .nav-menu a:focus {
     display: flex;
     align-items: center;
-    color: #45505b;
+    color: var(--color-h);
     padding: 10px 18px;
     margin-bottom: 8px;
     transition: 0.3s;
     font-size: 15px;
     border-radius: 50px;
-    background: #f2f3f5;
+    background: var(--card-bg-color);
     height: 56px;
     width: 100%;
     overflow: hidden;
@@ -478,7 +468,7 @@ body.loaded {
 .nav-menu a span,
 .nav-menu a:focus span {
     padding: 0 5px 0 7px;
-    color: #45505b;
+    color: var(--color-h);
 }
 
 @media (min-width: 992px) {
@@ -491,7 +481,7 @@ body.loaded {
     .nav-menu a span,
     .nav-menu a:focus span {
         display: none;
-        color: #fff;
+        color: var(--card-bg-color);
     }
 }
 
@@ -499,21 +489,21 @@ body.loaded {
 .nav-menu .active,
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
-    color: #fff;
-    background: #4285F4;
+    color: var(--color-whi);
+    background: var(--color-blu);
 }
 
 .nav-menu a:hover span,
 .nav-menu .active span,
 .nav-menu .active:focus span,
 .nav-menu li:hover>a span {
-    color: #fff;
+    color: var(--color-whi);
 }
 
 .nav-menu a:hover,
 .nav-menu li:hover>a {
     width: 100%;
-    color: #fff;
+    color: var(--color-whi);
 }
 
 .nav-menu a:hover span,
@@ -541,7 +531,7 @@ body.loaded {
 }
 
 .mobile-nav-toggle i {
-    color: #45505b;
+    color: var(--color-h);
 }
 
 .mobile-nav-active {
@@ -550,21 +540,20 @@ body.loaded {
 
 .mobile-nav-active #header {
     left: 0;
+    background-color: var(--color-bg);
 }
 
 .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    background-color: #4285F4;
+    color: var(--color);
+    background-color: var(--card-bg-color);
 }
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
+.hero {
     width: 100%;
-    height: 100vh;
-    background: url("../img/hero-bg-prev.jpg") top right no-repeat;
-    background-size: cover;
+    height: auto;
     position: relative;
 }
 
@@ -574,14 +563,22 @@ body.loaded {
     }
 }
 
-#hero:before {
-    content: "";
-    background: rgba(255, 255, 255, 0.555);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
+.hero-img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.hero-txt {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 #hero h1 {
@@ -589,18 +586,18 @@ body.loaded {
     font-size: 64px;
     font-weight: 700;
     line-height: 56px;
-    color: #45505b;
+    color: var(--color-h);
 }
 
 #hero p {
-    color: #45505b;
+    color: var(--color-h);
     margin: 15px 0 0 0;
     font-size: 26px;
     font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
-    color: #4285F4;
+    color: var(--color-blu);
     letter-spacing: 1px;
 }
 
@@ -611,14 +608,14 @@ body.loaded {
 #hero .social-links a {
     font-size: 24px;
     display: inline-block;
-    color: #45505b;
+    color: var(--color-h);
     line-height: 1;
     margin-right: 20px;
     transition: 0.3s;
 }
 
 #hero .social-links a:hover {
-    color: #4285F4;
+    color: var(--color-blu);
 }
 
 @media (max-width: 992px) {
@@ -642,8 +639,8 @@ body.loaded {
 # Sections General
 --------------------------------------------------------------*/
 section {
-    padding: 60px 0;
     overflow: hidden;
+    margin-bottom: 200px;
 }
 
 .section-title {
@@ -661,7 +658,7 @@ section {
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
-    color: #45505b;
+    color: var(--color-h);
 }
 
 .section-title h2::before {
@@ -681,7 +678,7 @@ section {
     display: block;
     width: 40px;
     height: 3px;
-    background: #4285F4;
+    background: var(--color-blu);
     bottom: 0;
     left: calc(50% - 20px);
 }
@@ -689,37 +686,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .content h3 {
-    font-weight: 700;
-    font-size: 26px;
-    color: #728394;
-}
 
-.about .content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.about .content ul li {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.about .content ul strong {
-    margin-right: 10px;
-}
-
-.about .content ul i {
-    font-size: 16px;
-    margin-right: 5px;
-    color: #4285F4;
-    line-height: 0;
-}
-
-.about .content p:last-child {
-    margin-bottom: 0;
-}
 
 /*--------------------------------------------------------------
 # Skills
@@ -738,7 +705,6 @@ section {
     display: block;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
-    color: #45505b;
 }
 
 .skills .progress .skill .val {
@@ -754,7 +720,7 @@ section {
     width: 1px;
     height: 10px;
     transition: .9s;
-    background-color: #4285F4;
+    background-color: var(--color-blu);
 }
 
 /*--------------------------------------------------------------
@@ -765,13 +731,13 @@ section {
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #45505b;
+    color: var(--color-h);
 }
 
 .resume .resume-item {
     padding: 0 0 20px 20px;
     margin-top: -2px;
-    border-left: 2px solid #4285F4;
+    border-left: 2px solid var(--color-blu);
     position: relative;
 }
 
@@ -781,13 +747,12 @@ section {
     font-weight: 600;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    color: #4285F4;
+    color: var(--color-blu);
     margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
     font-size: 16px;
-    background: #f7f8f9;
     padding: 5px 15px;
     display: inline-block;
     font-weight: 600;
@@ -814,21 +779,21 @@ section {
     border-radius: 50px;
     left: -9px;
     top: 0;
-    background: #fff;
-    border: 2px solid #4285F4;
+    background: var(--color-whi);
+    border: 2px solid var(--color-blu);
 }
 
 .resume button {
-    background: #4285F4;
+    background: var(--color-blu);
     border: 0;
     padding: 10px 35px;
-    color: #fff;
+    color: var(--color-whi);
     transition: 0.4s;
     border-radius: 50px;
 }
 
 .resume button:hover {
-    background: #2776fa;
+    background: var(--color-blu);
 }
 
 /*--------------------------------------------------------------
@@ -848,7 +813,7 @@ section {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    background-color: #ddd;
+    background-color: var(--card-bg-color);
 }
 
 .project-card:hover {
@@ -871,7 +836,7 @@ section {
 .project-image {
     width: 280px;
     height: 120px;
-    border-radius: 10px;   
+    border-radius: 10px;
 }
 
 .project-info {
@@ -897,7 +862,7 @@ section {
 
 .contact .info i {
     font-size: 20px;
-    color: #4285F4;
+    color: var(--color-blu);
     float: left;
     width: 44px;
     height: 44px;
@@ -914,7 +879,7 @@ section {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #45505b;
+    color: var(--color-h);
 }
 
 .contact .info p {
@@ -939,8 +904,8 @@ section {
 .contact .info .github:hover i,
 .contact .info .linkedin:hover i,
 .contact .info .whatsapp:hover i {
-    background: #4285F4;
-    color: #fff;
+    background: var(--color-blu);
+    color: var(--color-whi);
 }
 
 @-webkit-keyframes animate-loading {
@@ -967,8 +932,8 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-    background: white;
-    color: #45505b;
+    background: var(--card-bg-color);
+    color: var(--color-h);
     font-size: 14px;
     text-align: center;
     padding: 30px 0;
@@ -997,8 +962,8 @@ section {
 #footer .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #4285F4;
-    color: #fff;
+    background: var(--color-blu);
+    color: var(--color-whi);
     line-height: 1;
     padding: 8px 0;
     margin-right: 4px;
@@ -1010,7 +975,8 @@ section {
 }
 
 #footer .social-links a:hover {
-    background: #2776fa;
-    color: #fff;
+    background: var(--color-blu);
+    color: var(--color-whi);
     text-decoration: none;
 }
+

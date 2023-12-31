@@ -122,39 +122,39 @@
   /**
    * Preloader
    */
-  function typeText(text, elementId, delay) {
-    let index = 0;
-    const element = document.getElementById(elementId);
+  // function typeText(text, elementId, delay) {
+  //   let index = 0;
+  //   const element = document.getElementById(elementId);
 
-    function type() {
-      if (index < text.length) {
-        element.textContent += text.charAt(index);
-        index++;
-        setTimeout(type, delay);
-      }
-    }
+  //   function type() {
+  //     if (index < text.length) {
+  //       element.textContent += text.charAt(index);
+  //       index++;
+  //       setTimeout(type, delay);
+  //     }
+  //   }
 
-    type();
-  }
+  //   type();
+  // }
 
-  setTimeout(function () {
-    typeText("Welcome", "preloader-text", 100);
-  }, 1000);
+  // setTimeout(function () {
+  //   typeText("Welcome", "preloader-text", 100);
+  // }, 1000);
 
-  setTimeout(function () {
-    document.getElementById("preloader-text").textContent = ""; // Clear the text
-    typeText("Please wait", "preloader-text", 100);
-  }, 4000);
+  // setTimeout(function () {
+  //   document.getElementById("preloader-text").textContent = ""; // Clear the text
+  //   typeText("Please wait", "preloader-text", 100);
+  // }, 4000);
 
-  setTimeout(function () {
-    document.getElementById("preloader-text").textContent = ""; 
-    typeText("Loading...", "preloader-text", 100);
-  }, 7000);
+  // setTimeout(function () {
+  //   document.getElementById("preloader-text").textContent = ""; 
+  //   typeText("Loading...", "preloader-text", 100);
+  // }, 7000);
 
-  setTimeout(function () {
-    document.querySelector('.preloader-container').style.display = 'none';
-    document.querySelector('body').classList.add('loaded');
-  }, 10000); 
+  // setTimeout(function () {
+  //   document.querySelector('.preloader-container').style.display = 'none';
+  //   document.querySelector('body').classList.add('loaded');
+  // }, 10000); 
 
 
 
@@ -204,3 +204,32 @@
   });
 
 })()
+
+
+
+// Dark Mode
+const modeBtn = document.getElementById('mode');
+modeBtn.onchange = (e) => {
+  if (modeBtn.checked === true) {
+    document.documentElement.classList.remove("light")
+    document.documentElement.classList.add("dark")
+    window.localStorage.setItem('mode', 'dark');
+  } else {
+    document.documentElement.classList.remove("dark")
+    document.documentElement.classList.add("light")
+    window.localStorage.setItem('mode', 'light');
+  }
+}
+
+const mode = window.localStorage.getItem('mode');
+if (mode == 'dark') {
+  modeBtn.checked = true;
+  document.documentElement.classList.remove("light")
+  document.documentElement.classList.add("dark")
+}
+
+if (mode == 'light') {
+  modeBtn.checked = false;
+  document.documentElement.classList.remove("dark")
+  document.documentElement.classList.add("light")
+}
