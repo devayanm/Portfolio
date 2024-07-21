@@ -326,7 +326,7 @@
     --card-gradient: linear-gradient(135deg, #90a4ae, #607d8b);
     --card-gradient2: linear-gradient(135deg, #607d8b, #ff8a65);
     --card-gradient3: linear-gradient(135deg, #607d8b, #004d40);
-    --card-gradient4: linear-gradient(135deg, #607d8b, #ff8a65);
+    --card-gradient4: linear-gradient(135deg, #607d8b, #64b5f6);
 }
 
 body {
@@ -343,19 +343,19 @@ body {
     color: var(--color-fg);
 }
 
-.card.journey {
+.card.grad1 {
     background: var(--card-gradient);
 }
 
-.card.interests {
+.card.grad2 {
     background: var(--card-gradient2);
 }
 
-.card.statement {
+.card.grad3 {
     background: var(--card-gradient3);
 }
 
-.card.drives {
+.card.grad4 {
     background: var(--card-gradient4);
 }
 
