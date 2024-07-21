@@ -314,6 +314,7 @@
 }
 
 :root.dark {
+    --color-whi: #fff;
     --color-bg: #263238;
     --color: #fff;
     --card-bg-color: #607d8b;
